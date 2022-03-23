@@ -5,8 +5,8 @@
     font-family: 'Mulish', sans-serif;
 }
 :root{
-    --h: 177;
-    --clr-primary: var(--h), 100%, 30%;
+    --h: 180;
+    --clr-primary: var(--h), 100%, 35%;
     --clr-dark: var(--h), 30%, 35%;
     --opacity: hsla(0, 0%, 100%, 0.8);
 }
@@ -36,6 +36,7 @@ svg{
     width: min(250px, 50vw);
 }
 form{
+    margin: 2em;
     --dir: bottom;
     display: flex;
     flex-direction: row-reverse;
@@ -118,9 +119,6 @@ input[type="submit"]:focus{
 }
 
 @media (orientation: portrait) {
-    body{
-        margin-block: 2em;
-    }
     form{
         --dir: left;
         flex-direction: column;
