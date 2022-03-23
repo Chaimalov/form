@@ -32,7 +32,6 @@ form{
     display: flex;
     flex-direction: row-reverse;
     overflow: hidden;
-    max-height: calc(100% - 2em);
     max-width: fit-content;
     background-color: white;
     border-radius: 1em;
@@ -109,6 +108,9 @@ input[type="submit"]:focus{
 }
 
 @media (orientation: portrait) {
+    body{
+        margin-block: 2em;
+    }
     form{
         flex-direction: column;
     }
