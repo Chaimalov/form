@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+}
+:root{
+    --h: 162;
+    --clr-primary: var(--h), 80%, 40%;
+    --clr-dark: var(--h), 30%, 35%;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background-color: hsl(var(--clr-primary),.1);
+    color: hsl(var(--clr-dark));
+}
+.image{
+    display: grid;
+    place-items: center;
+    /* background-color: hsl(var(--clr-primary),.4); */
+    padding: 2em;
+    max-height: 300px;
+    overflow: hidden;
+}
+svg{
+    width: min(500px, 50vmin);
+}
+form{
+    overflow: hidden;
+    max-width: fit-content;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0 .5em 2em hsl(var(--clr-primary),.1);
+}
+input,
+.field > *{
+    transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+fieldset{
+    display: grid;
+    gap: 1em;
+    padding: 1.5em;
+    border: none;
+    max-width: max-content;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    padding-top: .5em;
+    line-height: 1;
+    text-transform: capitalize;
+}
+p{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    color: hsl(var(--clr-dark),.6);
+}
+.field{
+    display: flex;
+    flex-direction: column-reverse;
+}
+label{
+    display: block;
+    text-transform: capitalize;
+}
+
+input{
+    all: unset;
+    border: solid hsl(var(--clr-primary), .3) 1px;
+    border-radius: .5em;
+    padding: .25em;
+    margin-block: .25em;
+    width: 100%;
+}
+input:focus-within{
+    border: solid hsl(var(--clr-primary)) 1px;
+}
+input:focus-within + label{
+    font-weight: 900;
+}
+input[type="submit"]{
+    all: unset;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    width: max-content;
+    background-color: hsl(var(--clr-primary),1);
+    padding: .5em 2em;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 1em;
+    box-shadow: 0 .5em 1em hsl(var(--clr-primary),.3);
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+    background-color: hsl(var(--clr-primary),.7);
+}
