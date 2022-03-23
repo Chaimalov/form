@@ -22,14 +22,17 @@ body{
     place-items: center;
     background-color: hsl(var(--clr-primary),.2);
     padding: 2em;
-    max-height: 300px;
+    /* max-height: 300px; */
     overflow: hidden;
 }
 svg{
-    width: min(500px, 50vw);
+    width: min(250px, 50vw);
 }
 form{
+    display: flex;
+    flex-direction: row-reverse;
     overflow: hidden;
+    max-height: calc(100vh - 4em);
     max-width: fit-content;
     background-color: white;
     border-radius: 1em;
@@ -42,7 +45,7 @@ input,
 fieldset{
     display: grid;
     gap: 1em;
-    padding: 1.5em;
+    padding: 2em;
     border: none;
     max-width: max-content;
     margin: auto;
@@ -103,4 +106,10 @@ input[type="submit"]{
 input[type="submit"]:hover,
 input[type="submit"]:focus{
     background-color: hsl(var(--clr-primary),.7);
+}
+
+@media (orientation: portrait) {
+    form{
+        flex-direction: column;
+    }
 }
