@@ -5,7 +5,7 @@
     font-family: 'Mulish', sans-serif;
 }
 :root{
-    --h: 179;
+    --h: 177;
     --clr-primary: var(--h), 100%, 30%;
     --clr-dark: var(--h), 30%, 35%;
 }
