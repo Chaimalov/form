@@ -5,8 +5,8 @@
     font-family: 'Mulish', sans-serif;
 }
 :root{
-    --h: 162;
-    --clr-primary: var(--h), 80%, 40%;
+    --h: 179;
+    --clr-primary: var(--h), 100%, 30%;
     --clr-dark: var(--h), 30%, 35%;
 }
 
@@ -14,13 +14,13 @@ body{
     display: grid;
     min-height: 100vh;
     place-items: center;
-    background-color: hsl(var(--clr-primary),.1);
+    background-color: hsl(var(--clr-dark),5%);
     color: hsl(var(--clr-dark));
 }
 .image{
     display: grid;
     place-items: center;
-    /* background-color: hsl(var(--clr-primary),.4); */
+    background-color: hsl(var(--clr-primary),.2);
     padding: 2em;
     max-height: 300px;
     overflow: hidden;
@@ -78,7 +78,7 @@ input{
     padding: .25em;
     margin-block: .25em;
     width: 100%;
-    height: 1.25em;
+    /* height: 1.25em; */
 }
 input:focus-within{
     border: solid hsl(var(--clr-primary)) 1px;
