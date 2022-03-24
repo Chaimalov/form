@@ -59,6 +59,7 @@ fieldset{
     border: none;
     max-width: max-content;
     margin: auto;
+    transition: 500ms;
 }
 
 h2{
@@ -125,6 +126,7 @@ button{
     cursor: pointer;
     color: hsl(var(--clr-primary));
 }
+
 button:hover,
 button:focus{
     text-decoration: underline;
