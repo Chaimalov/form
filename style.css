@@ -73,7 +73,7 @@ p{
     color: hsl(var(--clr-dark),.6);
 }
 .field{
-    display: block;
+    display: flex;
     transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 label{
