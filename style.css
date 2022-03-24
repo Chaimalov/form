@@ -84,6 +84,7 @@ label{
 input{
     all: unset;
     border: solid hsl(var(--clr-primary), .3) 1px;
+    font-weight: initial;
     border-radius: .5em;
     padding: .25em;
     margin-block: .25em;
