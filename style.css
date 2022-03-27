@@ -81,7 +81,7 @@ label{
     text-transform: capitalize;
 }
 
-input{
+.field input{
     all: unset;
     border: solid hsl(var(--clr-primary), .3) 1px;
     font-weight: initial;
@@ -134,3 +134,4 @@ button:focus{
         flex-direction: column;
     }
 }
+
