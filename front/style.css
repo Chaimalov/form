@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*, *::after, *::before{
+
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Mulish', sans-serif;
 }
-:root{
+
+:root {
     --h: 180;
     --clr-primary: var(--h), 100%, 35%;
     --clr-dark: var(--h), 30%, 35%;
@@ -16,38 +20,71 @@
     background: hsl(var(--clr-primary));
 }
 
-body{
+body {
     display: grid;
     min-height: 100vh;
     place-items: center;
-    background-color: hsl(var(--clr-dark),5%);
+    background-color: hsl(var(--clr-dark), 5%);
     color: hsl(var(--clr-dark));
 }
-.image{
+
+.image {
     display: grid;
     place-items: center;
-    background-image: linear-gradient(to top, var(--opacity), var(--opacity)),linear-gradient(to top, hsl(var(--clr-primary)), hsl(var(--clr-primary)));
+    background-image: linear-gradient(to top, var(--opacity), var(--opacity)), linear-gradient(to top, hsl(var(--clr-primary)), hsl(var(--clr-primary)));
     padding: 2em;
     border-bottom-left-radius: 2em;
     /* max-height: 300px; */
     overflow: hidden;
 }
-svg{
+
+svg {
     width: min(250px, 50vw);
 }
-form{
-    margin: 2em;
-    --dir: bottom;
+
+.card,
+form {
     display: flex;
-    flex-direction: row-reverse;
-    overflow: hidden;
-    background-image: linear-gradient(to top, var(--opacity), var(--opacity)), linear-gradient(to var(--dir), hsl(var(--clr-primary)) 50%,white 50%);
-    max-width: fit-content;
+    margin: 2em;
     border-radius: 1em;
-    box-shadow: 0 .5em 2em hsl(var(--clr-primary),.1);
+    box-shadow: 0 .5em 2em hsl(var(--clr-primary), .1);
 }
 
-fieldset{
+.card {
+    padding: 2em;
+    flex-direction: column;
+    gap: 1em;
+    animation: in 250ms forwards;
+    text-align: center;
+}
+
+@keyframes in {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+form {
+    --dir: bottom;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    background-image: linear-gradient(to top, var(--opacity), var(--opacity)), linear-gradient(to var(--dir), hsl(var(--clr-primary)) 50%, white 50%);
+    max-width: fit-content;
+    transition: 200ms ease;
+}
+
+form.hide {
+    animation: in 250ms reverse forwards;
+}
+
+fieldset {
     border-top-right-radius: 2em;
     background-color: white;
     display: grid;
@@ -58,7 +95,7 @@ fieldset{
     margin: auto;
 }
 
-h2{
+h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: 900;
@@ -66,22 +103,25 @@ h2{
     line-height: 1;
     text-transform: capitalize;
 }
-p{
+
+p {
     text-align: center;
     width: 70%;
     margin: auto;
-    color: hsl(var(--clr-dark),.6);
+    color: hsl(var(--clr-dark), .6);
 }
-.field{
+
+.field {
     display: grid;
     transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-label{
+
+label {
     display: block;
     text-transform: capitalize;
 }
 
-.field input{
+.field input {
     all: unset;
     border: solid hsl(var(--clr-primary), .3) 1px;
     font-weight: initial;
@@ -91,31 +131,36 @@ label{
     width: 100%;
     /* height: 1.25em; */
 }
-.field:focus-within input{
+
+.field:focus-within input {
     border: solid hsl(var(--clr-primary)) 1px;
 }
-.field:focus-within{
+
+.field:focus-within {
     font-weight: 900;
 }
-input[type="submit"]{
+
+input[type="submit"] {
     all: unset;
     text-align: center;
     color: white;
     font-weight: 700;
     cursor: pointer;
     width: max-content;
-    background-color: hsl(var(--clr-primary),1);
+    background-color: hsl(var(--clr-primary), 1);
     padding: .5em 2em;
     border-radius: 1em;
     margin: auto;
     margin-top: 1em;
-    box-shadow: 0 .5em 1em hsl(var(--clr-primary),.3);
+    box-shadow: 0 .5em 1em hsl(var(--clr-primary), .3);
 }
+
 input[type="submit"]:hover,
-input[type="submit"]:focus{
-    background-color: hsl(var(--clr-primary),.7);
+input[type="submit"]:focus {
+    background-color: hsl(var(--clr-primary), .7);
 }
-button{
+
+button {
     all: unset;
     margin: auto;
     font-size: .8em;
@@ -125,16 +170,17 @@ button{
 }
 
 button:hover,
-button:focus{
+button:focus {
     text-decoration: underline;
 }
+
 @media (orientation: portrait) {
-    form{
+    form {
         --dir: left;
         flex-direction: column;
     }
 }
 
-.slider{
+.slider {
     padding-bottom: 2em;
 }
